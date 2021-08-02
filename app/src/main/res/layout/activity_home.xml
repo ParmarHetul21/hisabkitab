@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorAccent"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <Spinner
+            android:id="@+id/customSpinner"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="132dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.885" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.060000002"
+            app:srcCompat="@drawable/ic_menu_50dp"
+            tools:ignore="OnClick" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabpro"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/orange"
+            android:clickable="true"
+            android:onClick="gotoprofile"
+            android:visibility="invisible"
+            app:backgroundTint="@color/orange"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fabcat"
+            app:layout_constraintStart_toStartOf="@+id/fabcat"
+            app:layout_constraintTop_toBottomOf="@+id/fabcat"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_person_25dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fablist"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/purple"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/purple"
+            app:fabCustomSize="40dp"
+            android:onClick="viewexpense"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fabadd"
+            app:layout_constraintStart_toStartOf="@+id/fabadd"
+            app:layout_constraintTop_toBottomOf="@+id/fabadd"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_playlist_add_check_25dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabadd"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/peach"
+            android:onClick="addexpense"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/peach"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fabmenu"
+            app:layout_constraintStart_toStartOf="@+id/fabmenu"
+            app:layout_constraintTop_toBottomOf="@+id/fabmenu"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_add_25dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabset"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fabpro"
+            app:layout_constraintStart_toStartOf="@+id/fabpro"
+            app:layout_constraintTop_toBottomOf="@+id/fabpro"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_settings_25dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabcat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/green"
+            android:clickable="true"
+            android:onClick="viewcategory"
+            android:visibility="invisible"
+            app:backgroundTint="@color/green"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fablist"
+            app:layout_constraintStart_toStartOf="@+id/fablist"
+            app:layout_constraintTop_toBottomOf="@+id/fablist"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_view_list_25dp" />
+
+        <TextView
+            android:id="@+id/AddExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Add Expense"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/fablist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fabadd"
+            app:layout_constraintTop_toTopOf="@+id/fabadd" />
+
+        <TextView
+            android:id="@+id/ViewExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="View Expenses"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/fablist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fablist"
+            app:layout_constraintTop_toTopOf="@+id/fablist" />
+
+        <TextView
+            android:id="@+id/ViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="View Category"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/fabcat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fabcat"
+            app:layout_constraintTop_toTopOf="@+id/fabcat" />
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Profile"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/fabpro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fabpro"
+            app:layout_constraintTop_toTopOf="@+id/fabpro" />
+
+        <TextView
+            android:id="@+id/Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Settings"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/fabset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fabset"
+            app:layout_constraintTop_toBottomOf="@+id/fabpro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

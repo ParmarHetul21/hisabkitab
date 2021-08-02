@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/colorAccent"
+    tools:context=".Salary_Details">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Salary Details"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <EditText
+            android:id="@+id/amt"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Salary Amount"
+            android:inputType="number"
+            android:drawableLeft="@drawable/ic_account_balance_wallet_black_24dp"
+            android:paddingStart="10dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:background="@drawable/rounded"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edttitle"
+            app:layout_constraintStart_toStartOf="@+id/edttitle"
+            app:layout_constraintTop_toBottomOf="@+id/edttitle"
+            app:layout_constraintVertical_bias="0.07999998" />
+
+        <EditText
+            android:id="@+id/edttitle"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded"
+            android:ems="10"
+            android:hint="Job Title"
+            android:inputType="textPersonName"
+            android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+            android:paddingStart="10dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:layout_constraintVertical_bias="0.13999999" />
+
+
+        <Button
+            android:id="@+id/usalary"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn"
+            android:text="Update"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/amt"
+            app:layout_constraintStart_toStartOf="@+id/amt"
+            app:layout_constraintTop_toBottomOf="@+id/amt"
+            app:layout_constraintVertical_bias="0.16000003" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
